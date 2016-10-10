@@ -45,40 +45,44 @@ Get the data at:
 git clone https://github.com/ucsdlib/libcarp-data-notes/
 ```
 
+```
     Cloning into 'libcarp-data-notes'...
     remote: Counting objects: 55, done.[K
     remote: Compressing objects: 100% (42/42), done.[K
     remote: Total 55 (delta 19), reused 33 (delta 8), pack-reused 0[K
     Unpacking objects: 100% (55/55), done.
     Checking connectivity... done.
-
+```
 
 ## Begin with brief shell explanation.
 
 In this session we will introduce programming by looking at how data can be manipulated, counted, and mined using the Unix shell, a **command line interface or CLI** to your computer and the files to which it has access.
 
 The shell is one of the most productive programming environments ever created. 
+
 * Its syntax may be cryptic, but people who have mastered it can experiment with different commands interactively, then use what they have learned to automate their work.
 * Graphical user interfaces may be better at the first, but the shell is still unbeaten at the second.
 
 A Unix shell is a **command-line interpreter** that provides a user interface for:
+
 * the Linux operating system and for Unix-like systems (such as iOS)
 * Soon to be integrated in new versions of Windows
 
 For Windows users, the shell program such as **Git Bash** provide a Unix-like interface. 
+
 * This session will cover a small number of basic commands, which constitute building blocks upon which more complex commands can be constructed to fit your data or project.
 
 The motivations for wanting to learn shell commands are many and various. 
+
 * What you can quickly learn from this workshop are the basics to quickly query lots of data for the information you want in a fast and efficient way.
 
-
-
 #### Examples:
-To give you some idea of what the shell can do, I will demonstrate how to find the number of articles published in 2009 in academic history journals whose title contains the word ‘International’.
+
+To give you some idea of what the shell can do, I will demonstrate how to find the number of articles published in **2009** in academic history journals whose title contains the word ‘International’.
 
 First, let’s use a shell command to see how big this file is.
-* Type **wc -l ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv**
 
+Type: 
 
 ```bash
 wc -l ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv
@@ -98,6 +102,7 @@ To introduce the shell, let’s look at a complete string of shell commands to:
 grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL | awk -F'\t' '{print $5}' | sort | uniq -c
 ```
 
+```
       40 AFRICA -LONDON- INTERNATIONAL AFRICAN INSTITUTE-
        1 ARCHAEOLOGY ETHNOLOGY AND ANTHROPOLOGY OF EURASIA
       34 AUSTRALIAN JOURNAL OF INTERNATIONAL AFFAIRS
@@ -127,7 +132,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
        1 JOURNAL OF MODERN AFRICAN STUDIES
        2 RESEARCH IN INTERNATIONAL STUDIES SOUTHEAST ASIA SERIES
        1 REVOLUTIONARY RUSSIA
-
+```
 
 #### Break down and briefly explain each command:
 
@@ -136,7 +141,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
 * Review each part in turn:
 
 #### First part:
-* grep 2009 2014-01_JA.tsv
+1. grep 2009 2014-01_JA.tsv
 * grep is the command here. 
 * It tells the computer to search the spreadsheet 2014-01_JA.tsv for all the lines that contain the string 2009 and to store those in memory. 
 * The pipe then tells the machine to hold those in memory for the minute as we have something else we want to do.
@@ -146,6 +151,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
 grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | head -10 
 ```
 
+```  
     History_1a-rdf.tsv	Harnish, D.	2	26	ASIAN MUSIC	0044-9202	(Uk)RN000200906	ASIAN MUSIC 26(2), 157-159. (1995)	Cilokaq Music of Lombok	xxu	eng	SOCIETY FOR ASIAN MUSIC, INC.	1995
     History_1a-rdf.tsv	Arana, M.	2	26	ASIAN MUSIC	0044-9202	(Uk)RN000200918	ASIAN MUSIC 26(2), 160-162. (1995)	Eternal Voices: Traditional Vietnamese Music in the United States	xxu	eng	SOCIETY FOR ASIAN MUSIC, INC.	1995
     History_1a-rdf.tsv	Ming-mei, Y.	2	26	ASIAN MUSIC	0044-9202	(Uk)RN000200920	ASIAN MUSIC 26(2), 163-165. (1995)	Soul of China - Guqin Recital by Professor LI Xiang Ting	xxu	eng	SOCIETY FOR ASIAN MUSIC, INC.	1995
@@ -156,7 +162,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | head -10
     History_1a-rdf.tsv	Markoff, I.	2	29	MIDDLE EAST STUDIES ASSOCIATION BULLETIN		(Uk)RN005420090	MIDDLE EAST STUDIES ASSOCIATION BULLETIN 29(2), 157-160. (1995)	Introduction to Sufi Music and Ritual in Turkey	xxk	eng	THE MIDDLE EAST STUDIES ASSOCIATION OF NORTH AMERICA, INC.	1995
     History_1a-rdf.tsv	Keefe, S. E.	1	80	GEORGIA HISTORICAL QUARTERLY	0016-8297	(Uk)RN008662009	GEORGIA HISTORICAL QUARTERLY 80(1), 206-207. (1996)	Loftin, Healing Hands	xxu	eng	UNIVERSITY OF GEORGIA	1996
     History_1a-rdf.tsv	Downes, P.	4	29	EIGHTEENTH CENTURY STUDIES	0013-2586	(Uk)RN011720092	EIGHTEENTH CENTURY STUDIES 29(4), 413-432. (1996)	Sleep-Walking Out of the Revolution: Brown's Edgar Huntly	xxu	eng	THE JOHNS HOPKINS UNIVERSITY PRESS	1996
-
+```
 
 #### Second part:
 *  grep INTERNATIONAL 
@@ -169,6 +175,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | head -10
 grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL | head -10
 ```
 
+```
     History_1b-rdf.tsv	Cherry, S.	2	2	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES	1750-0478	(Uk)RN200927951	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES 2(2), 7-30. (2006)	Medicine and rural health care in nineteenth and early twentieth century Europe	xxk	eng	lincoln	2006
     History_1b-rdf.tsv	Barona, J. L.	2	2	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES	1750-0478	(Uk)RN200927966	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES 2(2), 31-51. (2006)	Rural health, medicine and cultural interaction in late nineteenth and early twentieth century Spain	xxk	eng	lincoln	2006
     History_1b-rdf.tsv	Andresen, A.	2	2	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES	1750-0478	(Uk)RN200927976	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES 2(2), 52-72. (2006)	Towards equality? Rural health and health legislation in Norway, 1860-1912	xxk	eng	lincoln	2006
@@ -179,7 +186,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
     History_1b-rdf.tsv	Andresen, A.	2	2	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES	1750-0478	(Uk)RN200928026	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES 2(2), 138-157. (2006)	Perspectives on the interaction of medicine and rural cultures: Spain, Norway and European Russia, 1860 - 1910	xxk	eng	lincoln	2006
     History_1b-rdf.tsv		2	2	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES	1750-0478	(Uk)RN200928037	INTERNATIONAL JOURNAL OF REGIONAL AND LOCAL STUDIES 2(2), 158-160. (2006)	I.Borowy and W.D. Gruner (eds) Facing illness in troubled times: health in Europe in the interwar years 1918-1939	xxk	eng	lincoln	2006
     History_1b-rdf.tsv	Piliang, I.J.	3	35	INDONESIAN QUARTERLY	0304-2170	(Uk)RN224067136	INDONESIAN QUARTERLY 35(3), 206-220. (2007)	Seeking for Victory, Not Biting The Dust: Political Parties' Situation Prior to 2009 General Elections	io	eng	CENTRE FOR STRATEGIC AND INTERNATIONAL STUDIES	2007
-
+```
 
 #### Third part:
 * awk -F'\t' '{print $5}'
@@ -940,68 +947,12 @@ ls -F
 
 now that you have two copies of Gulliver’s Travels, we are going to put them together to make an even longer book.
 
-
-
 To combine, or concatenate, two or more files use the **cat** command again. 
 * Type **cat gulliver.txt gulliver-backup.txt** and press enter. 
-
-
 
 ```bash
 cat gulliver.txt gulliver-backup.txt | head -50
 ```
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 
 * This prints, or displays, the combined files within the shell. 
 * 
@@ -1016,8 +967,6 @@ Use the **up arrow** to get to the last command
 ```bash
 cat gulliver.txt gulliver-backup.txt > gulliver-twice.txt
 ```
-
-    
 
 Now, when you type **ls -F** you’ll see **gulliver-twice.txt** appear in your directory.
 
@@ -1037,6 +986,7 @@ ls -F
 #### Wildcards - Combining more than 2 files
 
 When combining more than two files, using a **wildcard** can help avoid having to write out each filename individually. 
+
 * A useful wildcard is ***** which is a place holder for zero or more characters or numbers (note: this is slightly different from regex…). 
 * **make sure next cat command is run in the shell-data folder!**
 * **pwd**, **ls -F**
@@ -1048,8 +998,6 @@ pwd
 ```
 
     /Users/rotsuji/desktop/libcarp-data-notes/data
-
-
 
 ```bash
 ls -F
