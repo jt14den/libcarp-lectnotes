@@ -99,7 +99,7 @@ square brackets can be used to define a list or range of characters to be found.
 
 - `$` asserts the position at the end of the line. So what you put after it will only match the last character of a line of contents of a cell.
 
-- `\b` adds a word boundary. Putting this either side of a stops the regular expression matching longer variants of words. So:
+- `\b` adds a word boundary. Putting this on either side of a word stops the regular expression matching longer variants of words. So:
 	- the regular expression `foobar` will match `foobar` and find `666foobar`, `foobar777`, `8thfoobar8th` et cetera
 	- the regular expression `\bfoobar` will match `foobar` and find `foobar777`
 	- the regular expression `foobar\b` will match `foobar` and find `666foobar`
