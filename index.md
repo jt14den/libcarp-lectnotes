@@ -7,7 +7,7 @@
 5. [Shell 2](05-LC-ShellNotes-2.md)
 6. [Shell Mining](03-shell-mining.md )
 6. [Free text](07-freetext-notes.md)
-7. [Shell handout](LC-Shell-handout.mdown)
+7. [Shell handout](LC-Shell-handout.html)
 7. [LC Git Slides](08-lc-git-slides.pdf)
 8. [LC Git Notes](09-lc-git-notes.html)
 
