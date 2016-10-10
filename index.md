@@ -9,7 +9,7 @@
 6. [Free text](07-freetext-notes.md)
 7. [Shell handout](LC-Shell-handout.mdown)
 7. [LC Git Slides](08-lc-git-slides.pdf)
-8. [LC Git Notes](09-lc-git-notes.md)
+8. [LC Git Notes](09-lc-git-notes.html)
 
 
         
