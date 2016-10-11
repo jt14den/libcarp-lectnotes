@@ -10,6 +10,8 @@
 7. [Shell handout](LC-Shell-handout.html)
 7. [LC Git Slides](08-lc-git-slides.pdf)
 8. [LC Git Notes](09-lc-git-notes.html)
+9. [Open Refine Slides](10-openrefine-slides.html)
+10. [Open Refine Exercises](open-refine-exercises.html)
 
 
         
