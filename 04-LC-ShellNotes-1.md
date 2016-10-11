@@ -42,7 +42,7 @@ Get the data at:
 
 
 ```bash
-git clone https://github.com/ucsdlib/libcarp-data-notes/
+git clone https://github.com/jt14den/libcarp-data-notes
 ```
 
 ```
@@ -78,7 +78,7 @@ The motivations for wanting to learn shell commands are many and various.
 
 #### Examples:
 
-To give you some idea of what the shell can do, I will demonstrate how to find the number of articles published in **2009** in academic history journals whose title contains the word ‘International’.
+To give you some idea of what the shell can do, I will demonstrate how to find the number of articles published in **2009** in academic history journals whose title contains the word **International**.
 
 First, let’s use a shell command to see how big this file is.
 
