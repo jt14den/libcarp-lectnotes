@@ -11,7 +11,7 @@ There are several options for getting your data set into OpenRefine. You can upl
 * Google Spreadsheet
 
 To import the data for the exercises below, run OpenRefine. *NOTE: If Open Refine does not open in a browser window, open your browser and type the address http://127.0.0.1:3333/ to take you to the Open Refine interface.*
-* Locate the file called which you previously downloaded 'doaj-article-sample.csv'
+* Locate the file called which you previously downloaded 'doaj-article-sample.csv' (your downloaded this yesterday!)
 * Click 'Next'
 
 The next screen gives you some options to ensure that the data gets imported into OpenRefine correctly. The options vary depending on the type of data you are importing.
@@ -58,6 +58,12 @@ If you look at the Author column you should be able to see that there are multip
 * Choose 'Edit cells->Cluster and edit' from the author column (which should be split into individual values from the last exercise)
 * Using the 'key collision' method with the 'fingerprint' Keying Function work through the clusters of values, merging them to a single value where appropriate
 * Try changing the clustering method being used - which ones work well?
+
+## Exercise 7: Correct Publisher data
+* Create a text facet on the Publisher column
+* Note that in the values there are two that look identical - why does this value appear twice?
+* On the publisher column use the dropdown menu to select 'Edit cells->Common transforms->Trim leading and trailing whitespace'
+* Look at the publisher facet now - has it changed? (if it hasn't changed try clicking the Refresh option to make sure it updates)
 
 ## Exercise 8: Put titles into Title Case
 * Facet by publisher
@@ -174,7 +180,7 @@ In the Publisher column you should be able to see the various potential matches.
 
 * Click a 'double tick' in one of the Publisher column cells for the option "International Union of Crystallography"
 * This will accept this as a match for all cells - you should see the other options all disappear
-* Check the 'Publisher: Judgement' facet. This should now show that 858 items are 'matched' (if this does not update, try refreshing the facets)
+* Check the 'Publisher: Judgment' facet. This should now show that 858 items are 'matched' (if this does not update, try refreshing the facets)
 
 We could do these one by one, but if we are confident with matches, there is an option to accept all:
 
